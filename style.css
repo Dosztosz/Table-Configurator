@@ -4,7 +4,8 @@ License: none (public domain)
 */
 /* HTML5 display-role reset for older browsers */
 /* Jak chcesz dodac to wpisz blat1 itd */
-html, body {
+html,
+body {
   overflow: hidden;
 }
 
@@ -343,7 +344,7 @@ body {
   display: none;
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1000px) {
   .tlo {
     margin-top: 20px;
     width: 100%;
@@ -384,7 +385,8 @@ body {
     position: absolute;
     z-index: 2;
   }
-  html, body {
+  html,
+  body {
     overflow: auto;
   }
   .mobile {
@@ -435,7 +437,7 @@ body {
     display: block;
     padding-left: 20px;
     padding-right: 20px;
-    top: 100vw;
+    top: 400px;
     min-width: 100vw;
   }
   .ramka {
