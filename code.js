@@ -1,6 +1,6 @@
 var kebsik = 0;
 
-function zmiana(noga) {
+function legs(noga) {
     if (noga == 1) {
         document.getElementById('nogi').style.backgroundImage = "url('makieta/lotus/lotus-czarny.png')";
     } else
@@ -100,38 +100,24 @@ function zmiana(noga) {
 
 }
 
-function blat(kolor) {
+function tabletop(kolor) {
     if (kolor == 1) {
-        document.getElementById('blaty').style.backgroundImage = "url('makieta/blat_oak.png')";
+        document.getElementById('tabletop').style.backgroundImage = "url('makieta/blat_oak.png')";
     } else
     if (kolor == 2) {
-        document.getElementById('blaty').style.backgroundImage = "url('makieta/blat_marmur.png')";
+        document.getElementById('tabletop').style.backgroundImage = "url('makieta/blat_marmur.png')";
     } else
     if (kolor == 3) {
-        document.getElementById('blaty').style.backgroundImage = "url('makieta/blat_dab.png')";
+        document.getElementById('tabletop').style.backgroundImage = "url('makieta/blat_dab.png')";
     }
 }
 
-function tlo() {
+function background() {
     if (kebsik == 0) {
-        document.getElementById('tlo').style.backgroundImage = "url('makieta/bez_tlo.png')";
+        document.getElementById('background').style.backgroundImage = "url('makieta/bez_tlo.png')";
         kebsik = 1;
     } else {
-        document.getElementById('tlo').style.backgroundImage = "url('makieta/tlo.png')";
+        document.getElementById('background').style.backgroundImage = "url('makieta/tlo.png')";
         kebsik = 0;
     }
-}
-
-function openCity(evt, cityName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
 }
