@@ -9,48 +9,65 @@ License: none (public domain)
 
 /* Jak chcesz dodac to wpisz blat1 itd */
 
-html,
-body {
-    overflow: hidden;
+html, body {
+    overflow-x: hidden;
+    background-color: #f0f1f3;
+    font-family: Verdana, sans-serif;
 }
-
 #content {
     margin: 0;
 }
 
 .background {
+    min-height: 40vw;
     background-color: #f0f1f3;
-    min-height: 1000px;
 }
 
-.header {
-    padding-top: 50px;
-    margin-bottom: 50px;
-    text-align: center;
-    h3 {
-        font-size: 3rem;
+.kontener {
+    background-color: #f0f1f3;
+}
+.adnotations-container {
+    background-color: #f0f1f3;
+    .adnotations {
+        display: flex;
+        justify-content: space-evenly;
+        margin: auto;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        width: 50%;
+        li {
+            list-style: none;
+        }
     }
 }
-
-body {
-    font-family: Verdana, sans-serif;
-    background-color: #f0f1f3;
+.odstep {
+    margin-top: 100px;
 }
-
+.tables {
+    background-color: #f0f1f3;
+    margin-left: 50px;
+    width: 50%;
+    .t-section {
+        display: flex;
+        justify-content: space-between;
+        .t-row {
+            border-top: 1px solid rgb(59, 59, 59);
+            display: flex;
+            justify-content: space-between;
+            .column {
+                width: 160px;
+                margin: 25px;
+            }
+        }
+    }
+}
 .col-4 {
     margin-left: 0;
 }
-
-.ramka_gora {
-    height: 50px;
-    background-color: #4e4e4e;
-    margin-left: 0;
-    h3 {
-        color: white;
-    }
-    margin-bottom: 50px;
+.top-tab {
+    display: flex;
+    justify-content: space-around;
 }
-
 .row {
     left: 0;
     right: 0;
@@ -69,7 +86,6 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        overflow: hidden;
         img {
             display: flex;
             justify-content: center;
@@ -80,13 +96,12 @@ body {
         }
     }
 }
-
-.tlo {
+.bg {
     margin-top: 100px;
     width: 50%;
+    height: 800px;
     margin-left: 50px;
     position: absolute;
-    height: 800px;
     background-image: url("makieta/tlo.png");
     background-repeat: no-repeat;
     background-size: 100%;
@@ -96,36 +111,35 @@ body {
     text-align: center;
 }
 
-.blaty {
+.ttops {
     margin-top: 100px;
     width: 50%;
-    left: 0;
-    right: 0;
-    text-align: center;
-    position: absolute;
     height: 800px;
+    position: absolute;
     background-image: url("makieta/blat_oak.png");
     background-repeat: no-repeat;
     background-size: 100%;
     z-index: 3;
-}
-
-.nogi {
-    margin-top: 100px;
-    width: 50%;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-image: url("makieta/lotus/lotus-bialy.png");
     left: 0;
     right: 0;
     text-align: center;
+}
+
+.tbases {
+    margin-top: 100px;
+    width: 50%;
     height: 800px;
+    background-image: url("makieta/lotus/lotus-bialy.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
     position: absolute;
     z-index: 2;
+    left: 0;
+        right: 0;
+        text-align: center;
 }
 
 .tab {
-    overflow: hidden;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
 }
@@ -143,21 +157,6 @@ body {
     transition: 0.3s;
     font-size: 17px;
 }
-
-
-/* Change background color of buttons on hover */
-
-.tab button:hover {
-    background-color: #ddd;
-}
-
-
-/* Create an active/current tablink class */
-
-.tab button.active {
-    background-color: #ccc;
-}
-
 
 /* Style the tab content */
 
@@ -196,7 +195,6 @@ body {
     display: none;
     background-color: white;
     transition: visibility 0s, opacity 0.5s linear;
-    overflow: hidden;
 }
 
 .active,
@@ -278,6 +276,9 @@ body {
     cursor: pointer;
 }
 
+.mobile {
+    display: none;
+}
 @keyframes mymove {
     from {
         right: 0px;
@@ -287,12 +288,8 @@ body {
     }
 }
 
-.mobile {
-    display: none;
-}
-
 @media only screen and (max-width: 1000px) {
-    .tlo {
+    .bg {
         margin-top: 20px;
         width: 100%;
         margin-left: 0;
@@ -306,7 +303,7 @@ body {
         right: 0;
         text-align: center;
     }
-    .blaty {
+    .ttops {
         margin-top: 20px;
         width: 100%;
         left: 0;
@@ -319,7 +316,7 @@ body {
         background-size: contain;
         z-index: 3;
     }
-    .nogi {
+    .tbases {
         margin-top: 20px;
         width: 100%;
         background-repeat: no-repeat;
@@ -381,11 +378,5 @@ body {
         padding-right: 20px;
         top: 400px;
         min-width: 100vw;
-    }
-    .ramka {
-        border: none;
-    }
-    .ramka_gora {
-        display: none;
     }
 }
