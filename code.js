@@ -1,5 +1,21 @@
 var kebsik = 0;
 
+function zmiana_ustawienia(dane) {
+    if (dane == 'mockup') {
+        document.getElementById('background').style.backgroundImage = "url('makieta/tlo.png')";
+        document.getElementById('makieta').style.display = "block";
+        document.getElementById('white').style.display = "none";
+        document.getElementById('nogi').style.backgroundImage = "url('makieta/pajak/pajak_czarny.png')"
+        document.getElementById('tabletop').style.backgroundImage = "url('makieta/blat_oak.png')"
+    } else if (dane == 'white') {
+        document.getElementById('background').style.backgroundImage = "url('makieta/bez_tlo.png')";
+        document.getElementById('makieta').style.display = "none";
+        document.getElementById('white').style.display = "block";
+        document.getElementById('nogi').style.backgroundImage = "url('makieta/test/test-noga-czarny.png')"
+        document.getElementById('tabletop').style.backgroundImage = "url('makieta/test/test-blat-buk.png')"
+    }
+}
+
 function legs(noga) {
     if (noga == 1) {
         document.getElementById('nogi').style.backgroundImage = "url('makieta/lotus/lotus-czarny.png')";
@@ -97,6 +113,34 @@ function legs(noga) {
     if (noga == 32) {
         document.getElementById('nogi').style.backgroundImage = "url('makieta/trapez/ofix-zloty.png')";
     }
+    if (noga == 33) {
+        document.getElementById('nogi').style.backgroundImage = "url('makieta/test/test-noga-stal.png')";
+    }
+    if (noga == 'pajak_czarny') {
+        document.getElementById('nogi').style.backgroundImage = "url('makieta/test/test-noga-czarny.png')";
+    }
+    if (noga == 'pajak_bialy') {
+        document.getElementById('nogi').style.backgroundImage = "url('makieta/test/test-noga-bialy.png')";
+    }
+    if (noga == 'pajak_szary') {
+        document.getElementById('nogi').style.backgroundImage = "url('makieta/test/test-noga-szary.png')";
+    }
+    if (noga == 'pajak_zloty') {
+        document.getElementById('nogi').style.backgroundImage = "url('makieta/test/test-noga-zloty.png')";
+    }
+    if (noga == 'lotus_czarny') {
+        document.getElementById('nogi').style.backgroundImage = "url('makieta/test/test-lotus-czarny.png')";
+    }
+    if (noga == 'lotus_bialy') {
+        document.getElementById('nogi').style.backgroundImage = "url('makieta/test/test-lotus-bialy.png')";
+    }
+    if (noga == 'lotus_szary') {
+        document.getElementById('nogi').style.backgroundImage = "url('makieta/test/test-lotus-szary.png')";
+    }
+    if (noga == 'lotus_zloty') {
+        document.getElementById('nogi').style.backgroundImage = "url('makieta/test/test-lotus-zloty.png')";
+    }
+
 
 }
 
@@ -109,6 +153,18 @@ function tabletop(kolor) {
     } else
     if (kolor == 3) {
         document.getElementById('tabletop').style.backgroundImage = "url('makieta/blat_dab.png')";
+    }
+    if (kolor == 4) {
+        document.getElementById('tabletop').style.backgroundImage = "url('makieta/test/test-blat.png')";
+    }
+    if (kolor == 'beech') {
+        document.getElementById('tabletop').style.backgroundImage = "url('makieta/test/test-blat-buk.png')";
+    }
+    if (kolor == 'marble') {
+        document.getElementById('tabletop').style.backgroundImage = "url('makieta/test/test-blat-marmur.png')";
+    }
+    if (kolor == 'oak') {
+        document.getElementById('tabletop').style.backgroundImage = "url('makieta/test/test-blat-dab.png')";
     }
 }
 

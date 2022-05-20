@@ -100,7 +100,7 @@ html, body {
     height: 800px;
     margin-left: 50px;
     position: absolute;
-    background-image: url("makieta/tlo.png");
+    background-image: url("makieta/bez_tlo.png");
     background-repeat: no-repeat;
     background-size: 100%;
     z-index: 1;
@@ -114,7 +114,7 @@ html, body {
     width: 50%;
     height: 800px;
     position: absolute;
-    background-image: url("makieta/blat_oak.png");
+    background-image: url("makieta/test/test-blat-buk.png");
     background-repeat: no-repeat;
     background-size: 100%;
     z-index: 3;
@@ -127,7 +127,7 @@ html, body {
     margin-top: 100px;
     width: 50%;
     height: 800px;
-    background-image: url("makieta/lotus/lotus-bialy.png");
+    background-image: url("makieta/test/test-noga-czarny.png");
     background-repeat: no-repeat;
     background-size: 100%;
     position: absolute;
@@ -288,7 +288,9 @@ html, body {
         right: 140px;
     }
 }
-
+#makieta {
+    display:none;
+}
 @media only screen and (max-width: 1000px) {
     .bg {
         margin-top: 20px;

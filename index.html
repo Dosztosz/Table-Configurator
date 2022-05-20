@@ -30,7 +30,6 @@
             <a class="navbar-brand" href="https://www.magneticmobel.pl/">Company Logo</a>
         </div>
     </nav>
-    <!--Wersja Desktop-->
     <div class="row background">
         <div class="col-8">
             <div class="bg" id="background"> </div>
@@ -39,242 +38,320 @@
         </div>
         <div class="col-4">
             <div class="odstep"></div>
-            <div class="etykieta" onclick="background()">Background: ON/OFF</div><br>
-            <h3 class="tytul">Color of Tabletop</h3>
-            <div class="space">
-                <div class="etykieta" onclick="tabletop(1)"><img class="drewno" src="min/drewno/drewno.jpg">
-                    <p>Beech</p>
+            <div class="etykieta" onclick="zmiana_ustawienia('white')">No Background</div>
+            <div class="etykieta" onclick="zmiana_ustawienia('mockup')">MOCKUP</div><br>
+            <!--Makieta-->
+            <div id="makieta">
+                <h3 class="tytul">Color of Tabletop</h3>
+                <div class="space">
+                    <div class="etykieta" onclick="tabletop(1)"><img class="drewno" src="min/drewno/drewno.jpg">
+                        <p>Beech</p>
+                    </div>
+                    <div class="etykieta" onclick="tabletop(2)"><img class="drewno" src="min/drewno/marmur.jpg">
+                        <p>Marble</p>
+                    </div>
+                    <div class="etykieta" onclick="tabletop(3)"><img class="drewno" src="min/drewno/dab.jpg">
+                        <p>Oak</p>
+                    </div>
                 </div>
-                <div class="etykieta" onclick="tabletop(2)"><img class="drewno" src="min/drewno/marmur.jpg">
-                    <p>Marble</p>
+                <br>
+                <h3 class="tytul">Leg design</h3>
+                <button class="accordion">Spider type legs</button>
+                <div class="panel">
+                    <div class="row">
+                        <h4>Lotus</h4>
+                        <div onclick="legs(1)" class="col miniatura blok czarny">
+                            <img src="min/lotus/lotus_8x4_czarny.jpg">
+                            <div class="overlay">
+                                <div class="text">Black</div>
+                            </div>
+                        </div>
+                        <div onclick="legs(2)" class="col blok miniatura">
+                            <img src="min/lotus/lotus_8x4_bialy.jpg">
+                            <div class="overlay">
+                                <div class="text">White</div>
+                            </div>
+                        </div>
+                        <div onclick="legs(3)" class="col blok miniatura">
+                            <img src="min/lotus/lotus_8x4_szary.jpg">
+                            <div class="overlay">
+                                <div class="text">Grey</div>
+                            </div>
+                        </div>
+                        <div onclick="legs(4)" class="col blok miniatura">
+                            <img src="min/lotus/lotus_8x4_zloty.jpg">
+                            <div class="overlay">
+                                <div class="text">Golden</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h4>Pająk</h4>
+                        <div onclick="legs(5)" class="col blok miniatura">
+                            <img src="min/pajak/pajak_czarny.jpg">
+                            <div class="overlay">
+                                <div class="text">Black</div>
+                            </div>
+                        </div>
+                        <div onclick="legs(6)" class="col blok miniatura">
+                            <img src="min/pajak/pajak_bialy.jpg">
+                            <div class="overlay">
+                                <div class="text">White</div>
+                            </div>
+                        </div>
+                        <div onclick="legs(7)" class="col blok miniatura">
+                            <img src="min/pajak/pajak_szary.jpg">
+                            <div class="overlay">
+                                <div class="text">Grey</div>
+                            </div>
+                        </div>
+                        <div onclick="legs(8)" class="col blok miniatura">
+                            <img src="min/pajak/pajak_zloty.jpg">
+                            <div class="overlay">
+                                <div class="text">Golden</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h4>Atal</h4>
+                        <div onclick="legs(17)" class="col blok miniatura">
+                            <img src="min/atal/atal_czarny.jpg">
+                            <div class="overlay">
+                                <div class="text">Black</div>
+                            </div>
+                        </div>
+                        <div onclick="legs(18)" class="col blok miniatura">
+                            <img src="min/atal/atal_bialy.jpg">
+                            <div class="overlay">
+                                <div class="text">Grey</div>
+                            </div>
+                        </div>
+                        <div onclick="legs(19)" class="col blok miniatura">
+                            <img src="min/atal/atal_szary.jpg">
+                            <div class="overlay">
+                                <div class="text">Szary</div>
+                            </div>
+                        </div>
+                        <div onclick="legs(20)" class="col blok miniatura">
+                            <img src="min/atal/atal_zloty.jpg">
+                            <div class="overlay">
+                                <div class="text">Golden</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="etykieta" onclick="tabletop(3)"><img class="drewno" src="min/drewno/dab.jpg">
-                    <p>Oak</p>
+                <button class="accordion">X shaped legs</button>
+                <div class="panel">
+                    <div class="row">
+                        <h4>Nogi 8x4</h4>
+                        <div onclick="legs(9)" class="col blok miniatura">
+                            <img src="min/x/8x4/x_czarny.jpg">
+                            <div class="overlay">
+                                <div class="text">Black</div>
+                            </div>
+                        </div>
+                        <div onclick="legs(10)" class="col blok miniatura">
+                            <img src="min/x/8x4/x_bialy.jpg">
+                            <div class="overlay">
+                                <div class="text">Grey</div>
+                            </div>
+                        </div>
+                        <div onclick="legs(11)" class="col blok miniatura">
+                            <img src="min/x/8x4/x_szary.jpg">
+                            <div class="overlay">
+                                <div class="text">Szary</div>
+                            </div>
+                        </div>
+                        <div onclick="legs(12)" class="col blok miniatura">
+                            <img src="min/x/8x4/x_zloty.jpg">
+                            <div class="overlay">
+                                <div class="text">Golden</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h4>Nogi z widocznym spawem</h4>
+                        <div onclick="legs(13)" class="col blok miniatura">
+                            <img src="min/x/bez spaw/bez_spaw_czarny.jpg">
+                            <div class="overlay">
+                                <div class="text">Black</div>
+                            </div>
+                        </div>
+                        <div onclick="legs(14)" class="col blok miniatura">
+                            <img src="min/x/bez spaw/bez_spaw_bialy.jpg">
+                            <div class="overlay">
+                                <div class="text">White</div>
+                            </div>
+                        </div>
+                        <div onclick="legs(15)" class="col blok miniatura">
+                            <img src="min/x/bez spaw/bez_spaw_szary.jpg">
+                            <div class="overlay">
+                                <div class="text">Grey</div>
+                            </div>
+                        </div>
+                        <div onclick="legs(16)" class="col blok miniatura">
+                            <img src="min/x/bez spaw/bez_spaw_zloty.jpg">
+                            <div class="overlay">
+                                <div class="text">Golden</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="accordion">Square type legs</button>
+                <div class="panel">
+                    <div class="row">
+                        <h4>Trapez 8x2</h4>
+                        <div onclick="legs(21)" class="col blok miniatura">
+                            <img src="min/trapez/8x2/trapez_8x2_czarny.jpg">
+                            <div class="overlay">
+                                <div class="text">Black</div>
+                            </div>
+                        </div>
+                        <div onclick="legs(22)" class="col blok miniatura">
+                            <img src="min/trapez/8x2/trapez_8x2_bialy.jpg">
+                            <div class="overlay">
+                                <div class="text">White</div>
+                            </div>
+                        </div>
+                        <div onclick="legs(23)" class="col blok miniatura">
+                            <img src="min/trapez/8x2/trapez_8x2_szary.jpg">
+                            <div class="overlay">
+                                <div class="text">Grey</div>
+                            </div>
+                        </div>
+                        <div onclick="legs(24)" class="col blok miniatura">
+                            <img src="min/trapez/8x2/trapez_8x2_zloty.jpg">
+                            <div class="overlay">
+                                <div class="text">Golden</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h4>Ramy 8x2</h4>
+                        <div onclick="legs(25)" class="col blok miniatura">
+                            <img src="min/trapez/ramy/ramy_czarny.jpg">
+                            <div class="overlay">
+                                <div class="text">Black</div>
+                            </div>
+                        </div>
+                        <div onclick="legs(26)" class="col blok miniatura">
+                            <img src="min/trapez/ramy/ramy_bialy.jpg">
+                            <div class="overlay">
+                                <div class="text">White</div>
+                            </div>
+                        </div>
+                        <div onclick="legs(27)" class="col blok miniatura">
+                            <img src="min/trapez/ramy/ramy_szary.jpg">
+                            <div class="overlay">
+                                <div class="text">Grey</div>
+                            </div>
+                        </div>
+                        <div onclick="legs(28)" class="col blok miniatura">
+                            <img src="min/trapez/ramy/ramy_zloty.jpg">
+                            <div class="overlay">
+                                <div class="text">Golden</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h4>Trapez Ofix</h4>
+                        <div onclick="legs(29)" class="col blok miniatura">
+                            <img src="min/trapez/ofix/ofix_czarny.jpg">
+                            <div class="overlay">
+                                <div class="text">Black</div>
+                            </div>
+                        </div>
+                        <div onclick="legs(30)" class="col blok miniatura">
+                            <img src="min/trapez/ofix/ofix_bialy.jpg">
+                            <div class="overlay">
+                                <div class="text">White</div>
+                            </div>
+                        </div>
+                        <div onclick="legs(31)" class="col blok miniatura">
+                            <img src="min/trapez/ofix/ofix_szary.jpg">
+                            <div class="overlay">
+                                <div class="text">Grey</div>
+                            </div>
+                        </div>
+                        <div onclick="legs(32)" class="col blok miniatura">
+                            <img src="min/trapez/ofix/ofix_zloty.jpg">
+                            <div class="overlay">
+                                <div class="text">Golden</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <br>
-            <h3 class="tytul">Leg design</h3>
-            <button class="accordion">Spider type legs</button>
-            <div class="panel">
-                <div class="row">
-                    <h4>Lotus</h4>
-                    <div onclick="legs(1)" class="col miniatura blok czarny">
-                        <img src="min/lotus/lotus_8x4_czarny.jpg">
-                        <div class="overlay">
-                            <div class="text">Black</div>
-                        </div>
+            <!--Without Background-->
+            <div id="white">
+                <h3 class="tytul">Color of Tabletop</h3>
+                <div class="space">
+                    <div class="etykieta" onclick="tabletop('beech')"><img class="drewno" src="min/drewno/drewno.jpg">
+                        <p>Beech</p>
                     </div>
-                    <div onclick="legs(2)" class="col blok miniatura">
-                        <img src="min/lotus/lotus_8x4_bialy.jpg">
-                        <div class="overlay">
-                            <div class="text">White</div>
-                        </div>
+                    <div class="etykieta" onclick="tabletop('marble')"><img class="drewno" src="min/drewno/marmur.jpg">
+                        <p>Marble</p>
                     </div>
-                    <div onclick="legs(3)" class="col blok miniatura">
-                        <img src="min/lotus/lotus_8x4_szary.jpg">
-                        <div class="overlay">
-                            <div class="text">Grey</div>
-                        </div>
-                    </div>
-                    <div onclick="legs(4)" class="col blok miniatura">
-                        <img src="min/lotus/lotus_8x4_zloty.jpg">
-                        <div class="overlay">
-                            <div class="text">Golden</div>
-                        </div>
+                    <div class="etykieta" onclick="tabletop('oak')"><img class="drewno" src="min/drewno/dab.jpg">
+                        <p>Oak</p>
                     </div>
                 </div>
-                <div class="row">
-                    <h4>Pająk</h4>
-                    <div onclick="legs(5)" class="col blok miniatura">
-                        <img src="min/pajak/pajak_czarny.jpg">
-                        <div class="overlay">
-                            <div class="text">Black</div>
+                <br>
+                <h3 class="tytul">Leg design</h3>
+                <button class="accordion">Spider type legs</button>
+                <div class="panel">
+                    <div class="row">
+                        <h4>Pająk</h4>
+                        <div onclick="legs('pajak_czarny')" class="col blok miniatura">
+                            <img src="min/pajak/pajak_czarny.jpg">
+                            <div class="overlay">
+                                <div class="text">Black</div>
+                            </div>
+                        </div>
+                        <div onclick="legs('pajak_bialy')" class="col blok miniatura">
+                            <img src="min/pajak/pajak_bialy.jpg">
+                            <div class="overlay">
+                                <div class="text">White</div>
+                            </div>
+                        </div>
+                        <div onclick="legs('pajak_szary')" class="col blok miniatura">
+                            <img src="min/pajak/pajak_szary.jpg">
+                            <div class="overlay">
+                                <div class="text">Grey</div>
+                            </div>
+                        </div>
+                        <div onclick="legs('pajak_zloty')" class="col blok miniatura">
+                            <img src="min/pajak/pajak_zloty.jpg">
+                            <div class="overlay">
+                                <div class="text">Golden</div>
+                            </div>
                         </div>
                     </div>
-                    <div onclick="legs(6)" class="col blok miniatura">
-                        <img src="min/pajak/pajak_bialy.jpg">
-                        <div class="overlay">
-                            <div class="text">White</div>
+                    <div class="row">
+                        <h4>Lotus</h4>
+                        <div onclick="legs('lotus_czarny')" class="col miniatura blok czarny">
+                            <img src="min/lotus/lotus_8x4_czarny.jpg">
+                            <div class="overlay">
+                                <div class="text">Black</div>
+                            </div>
                         </div>
-                    </div>
-                    <div onclick="legs(7)" class="col blok miniatura">
-                        <img src="min/pajak/pajak_szary.jpg">
-                        <div class="overlay">
-                            <div class="text">Grey</div>
+                        <div onclick="legs('lotus_bialy')" class="col blok miniatura">
+                            <img src="min/lotus/lotus_8x4_bialy.jpg">
+                            <div class="overlay">
+                                <div class="text">White</div>
+                            </div>
                         </div>
-                    </div>
-                    <div onclick="legs(8)" class="col blok miniatura">
-                        <img src="min/pajak/pajak_zloty.jpg">
-                        <div class="overlay">
-                            <div class="text">Golden</div>
+                        <div onclick="legs('lotus_szary')" class="col blok miniatura">
+                            <img src="min/lotus/lotus_8x4_szary.jpg">
+                            <div class="overlay">
+                                <div class="text">Grey</div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <h4>Atal</h4>
-                    <div onclick="legs(17)" class="col blok miniatura">
-                        <img src="min/atal/atal_czarny.jpg">
-                        <div class="overlay">
-                            <div class="text">Black</div>
-                        </div>
-                    </div>
-                    <div onclick="legs(18)" class="col blok miniatura">
-                        <img src="min/atal/atal_bialy.jpg">
-                        <div class="overlay">
-                            <div class="text">Grey</div>
-                        </div>
-                    </div>
-                    <div onclick="legs(19)" class="col blok miniatura">
-                        <img src="min/atal/atal_szary.jpg">
-                        <div class="overlay">
-                            <div class="text">Szary</div>
-                        </div>
-                    </div>
-                    <div onclick="legs(20)" class="col blok miniatura">
-                        <img src="min/atal/atal_zloty.jpg">
-                        <div class="overlay">
-                            <div class="text">Golden</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button class="accordion">X shaped legs</button>
-            <div class="panel">
-                <div class="row">
-                    <h4>Nogi 8x4</h4>
-                    <div onclick="legs(9)" class="col blok miniatura">
-                        <img src="min/x/8x4/x_czarny.jpg">
-                        <div class="overlay">
-                            <div class="text">Black</div>
-                        </div>
-                    </div>
-                    <div onclick="legs(10)" class="col blok miniatura">
-                        <img src="min/x/8x4/x_bialy.jpg">
-                        <div class="overlay">
-                            <div class="text">Grey</div>
-                        </div>
-                    </div>
-                    <div onclick="legs(11)" class="col blok miniatura">
-                        <img src="min/x/8x4/x_szary.jpg">
-                        <div class="overlay">
-                            <div class="text">Szary</div>
-                        </div>
-                    </div>
-                    <div onclick="legs(12)" class="col blok miniatura">
-                        <img src="min/x/8x4/x_zloty.jpg">
-                        <div class="overlay">
-                            <div class="text">Golden</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <h4>Nogi z widocznym spawem</h4>
-                    <div onclick="legs(13)" class="col blok miniatura">
-                        <img src="min/x/bez spaw/bez_spaw_czarny.jpg">
-                        <div class="overlay">
-                            <div class="text">Black</div>
-                        </div>
-                    </div>
-                    <div onclick="legs(14)" class="col blok miniatura">
-                        <img src="min/x/bez spaw/bez_spaw_bialy.jpg">
-                        <div class="overlay">
-                            <div class="text">White</div>
-                        </div>
-                    </div>
-                    <div onclick="legs(15)" class="col blok miniatura">
-                        <img src="min/x/bez spaw/bez_spaw_szary.jpg">
-                        <div class="overlay">
-                            <div class="text">Grey</div>
-                        </div>
-                    </div>
-                    <div onclick="legs(16)" class="col blok miniatura">
-                        <img src="min/x/bez spaw/bez_spaw_zloty.jpg">
-                        <div class="overlay">
-                            <div class="text">Golden</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button class="accordion">Square type legs</button>
-            <div class="panel">
-                <div class="row">
-                    <h4>Trapez 8x2</h4>
-                    <div onclick="legs(21)" class="col blok miniatura">
-                        <img src="min/trapez/8x2/trapez_8x2_czarny.jpg">
-                        <div class="overlay">
-                            <div class="text">Black</div>
-                        </div>
-                    </div>
-                    <div onclick="legs(22)" class="col blok miniatura">
-                        <img src="min/trapez/8x2/trapez_8x2_bialy.jpg">
-                        <div class="overlay">
-                            <div class="text">White</div>
-                        </div>
-                    </div>
-                    <div onclick="legs(23)" class="col blok miniatura">
-                        <img src="min/trapez/8x2/trapez_8x2_szary.jpg">
-                        <div class="overlay">
-                            <div class="text">Grey</div>
-                        </div>
-                    </div>
-                    <div onclick="legs(24)" class="col blok miniatura">
-                        <img src="min/trapez/8x2/trapez_8x2_zloty.jpg">
-                        <div class="overlay">
-                            <div class="text">Golden</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <h4>Ramy 8x2</h4>
-                    <div onclick="legs(25)" class="col blok miniatura">
-                        <img src="min/trapez/ramy/ramy_czarny.jpg">
-                        <div class="overlay">
-                            <div class="text">Black</div>
-                        </div>
-                    </div>
-                    <div onclick="legs(26)" class="col blok miniatura">
-                        <img src="min/trapez/ramy/ramy_bialy.jpg">
-                        <div class="overlay">
-                            <div class="text">White</div>
-                        </div>
-                    </div>
-                    <div onclick="legs(27)" class="col blok miniatura">
-                        <img src="min/trapez/ramy/ramy_szary.jpg">
-                        <div class="overlay">
-                            <div class="text">Grey</div>
-                        </div>
-                    </div>
-                    <div onclick="legs(28)" class="col blok miniatura">
-                        <img src="min/trapez/ramy/ramy_zloty.jpg">
-                        <div class="overlay">
-                            <div class="text">Golden</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <h4>Trapez Ofix</h4>
-                    <div onclick="legs(29)" class="col blok miniatura">
-                        <img src="min/trapez/ofix/ofix_czarny.jpg">
-                        <div class="overlay">
-                            <div class="text">Black</div>
-                        </div>
-                    </div>
-                    <div onclick="legs(30)" class="col blok miniatura">
-                        <img src="min/trapez/ofix/ofix_bialy.jpg">
-                        <div class="overlay">
-                            <div class="text">White</div>
-                        </div>
-                    </div>
-                    <div onclick="legs(31)" class="col blok miniatura">
-                        <img src="min/trapez/ofix/ofix_szary.jpg">
-                        <div class="overlay">
-                            <div class="text">Grey</div>
-                        </div>
-                    </div>
-                    <div onclick="legs(32)" class="col blok miniatura">
-                        <img src="min/trapez/ofix/ofix_zloty.jpg">
-                        <div class="overlay">
-                            <div class="text">Golden</div>
+                        <div onclick="legs('lotus_zloty')" class="col blok miniatura">
+                            <img src="min/lotus/lotus_8x4_zloty.jpg">
+                            <div class="overlay">
+                                <div class="text">Golden</div>
+                            </div>
                         </div>
                     </div>
                 </div>
