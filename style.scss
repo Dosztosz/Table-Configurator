@@ -78,8 +78,6 @@ html, body {
     margin-bottom: 10px;
     .col {
         /*Optional*/
-        border: 1px rgb(71, 71, 71) solid;
-        border-radius: 10px;
         margin-left: 3px;
         margin-right: 3px;
         float: left;
@@ -269,6 +267,9 @@ html, body {
     opacity: 0;
     transition: .5s ease;
     background-color: #c4a35c;
+}
+.description {
+    border: none;
 }
 
 .blok:hover .overlay {
