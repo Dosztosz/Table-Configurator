@@ -40,6 +40,11 @@ html, body {
   width: 50%;
 }
 
+.adnotations-container .adnotations img {
+  height: 1vw;
+  width: 1.5vw;
+}
+
 .adnotations-container .adnotations li {
   list-style: none;
 }

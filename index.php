@@ -1,5 +1,4 @@
 <html>
-
 <head>
     <link rel="stylesheet" type="text/css" href="style.css?ver=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -12,22 +11,101 @@
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </head>
+
+<?php
+    $lang = $_GET["lang"];
+    if ($lang == "pl")
+    {
+    $background= "Bez Tła";
+    $tabletop= "Kolor Blatu";
+    $leg = "Wygląd Nóg";
+    $legtype = "Noga typu pająk";
+    $spider = "Pająk";
+    $lotus = "Lotus";
+    $beech = "Buk";
+    $marble = "Marmur";
+    $oak = "Dąb";
+    $black = "Czarny";
+    $white = "Biały";
+    $grey = "Szary";
+    $golden = "Złoty";
+    $specification = "Specyfikacja";
+    $spec_fold = "Wymiar Rozłożony";
+    $spec_unfold = "Wymiar Złożony";
+    $spec_tabletop_color = "Kolory Blatu";
+    $spec_material = "Buk, Dąb, Marmur";
+    $spec_material_whole = "Stal - MDF";
+    $spec_visual = "Wizualna grubość blatu";
+    $spec_leg = "Kolor Nóg";
+    $spec_leg_color = "Czarny, Biały, Antracyt, Złoty";
+    }
+    elseif ($lang == "de")
+    {
+    $background= "Keine Hintergründe";
+    $tabletop= "Farbe der Tischplatte";
+    $leg = "Aussehen der Beine";
+    $legtype = "Spider-leg";
+    $spider = "Spider";
+    $lotus = "Lotus";
+    $beech = "Buche";
+    $marble = "Marmor";
+    $oak = "Eiche";
+    $black = "Schwarz";
+    $white = "Weiß";
+    $grey = "Anthrazit";
+    $golden = "Golden";
+    $specification = "Informationen";
+    $spec_fold = "Abmessungen (gefaltet):";
+    $spec_unfold = "Abmessungen (ungefaltet):";
+    $spec_tabletop_color = "Farbe der Tischplatte:";
+    $spec_material = "Buche, Eiche, Marmor";
+    $spec_material_whole = "Stahl - MDF";
+    $spec_visual = "Sichtbare Höhe der Tischplatte";
+    $spec_leg = "Farbe der Beine";
+    $spec_leg_color = "Schwarz, Weiß, Athrazit, Golden";
+    }
+    elseif ($lang == "en")
+    {
+    $background= "No Background";
+    $tabletop= "Color of Tabletop";
+    $leg = "Type of Legs";
+    $legtype = "Spider-leg";
+    $spider = "Spider";
+    $lotus = "Lotus";
+    $beech = "Beech";
+    $marble = "Marble";
+    $oak = "Oak";
+    $black = "Black";
+    $white = "White";
+    $grey = "Anthracite";
+    $golden = "Golden";
+    $specification = "Informations";
+    $spec_fold = "Dimensions(fold):";
+    $spec_unfold = "Dimensions(unFold):";
+    $spec_tabletop_color = "Tabletop colour:";
+    $spec_material = "Beech, Oak, Marble";
+    $spec_material_whole = "Steel - MDF";
+    $spec_visual = "Visual height of tabletop";
+    $spec_leg = "Leg color";
+    $spec_leg_color = "Black, White, Athracite, Golden";
+    }
+?>
 <title>Table Configurator</title>
 
 <body>
 <div class="kontener">
     <nav class="adnotations-container">
         <ul class="adnotations">
-            <li>Najwyższa Jakość</li>
+            <a href="?lang=pl"><li><img src="svg/pl.svg"></li></a>
             <li>|</li>
-            <li>Precyzja Wykonania</li>
+            <a href="?lang=de"><li><img src="svg/de.svg"></li></a>
             <li>|</li>
-            <li>Prosta Konstrukcja</li>
+            <a href="?lang=en"><li><img src="svg/fr.svg"></li></a>
         </ul>
     </nav>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="https://www.magneticmobel.pl/">Company Logo</a>
+            <a class="navbar-brand" href="https://www.magneticmobel.pl/">Magnetic Mobel</a>
         </div>
     </nav>
     <div class="row background">
@@ -38,7 +116,7 @@
         </div>
         <div class="col-4">
             <div class="odstep"></div>
-            <div class="etykieta" onclick="zmiana_ustawienia('white')">No Background</div>
+            <div class="etykieta" onclick="zmiana_ustawienia('white')"><?php echo $background; ?></div>
             <div class="etykieta" onclick="zmiana_ustawienia('mockup')">MOCKUP</div><br>
             <!--Makieta-->
             <div id="makieta">
@@ -284,73 +362,73 @@
             </div>
             <!--Without Background-->
             <div id="white">
-                <h3 class="tytul">Color of Tabletop</h3>
+                <h3 class="tytul"><?php echo $tabletop; ?></h3>
                 <div class="space">
                     <div class="etykieta" onclick="tabletop('beech')"><img class="drewno" src="min/drewno/drewno.jpg">
-                        <p>Beech</p>
+                        <p><?php echo $beech; ?></p>
                     </div>
                     <div class="etykieta" onclick="tabletop('marble')"><img class="drewno" src="min/drewno/marmur.jpg">
-                        <p>Marble</p>
+                        <p><?php echo $marble; ?></p>
                     </div>
                     <div class="etykieta" onclick="tabletop('oak')"><img class="drewno" src="min/drewno/dab.jpg">
-                        <p>Oak</p>
+                        <p><?php echo $oak; ?></p>
                     </div>
                 </div>
                 <br>
-                <h3 class="tytul">Leg design</h3>
-                <button class="accordion">Spider type legs</button>
+                <h3 class="tytul"><?php echo $leg; ?></h3>
+                <button class="accordion"><?php echo $legtype; ?></button>
                 <div class="panel">
                     <div class="row">
-                        <h4>Pająk</h4>
+                        <h4><?php echo $spider; ?></h4>
                         <div onclick="legs('pajak_czarny')" class="col blok miniatura">
                             <img src="min/pajak/pajak_czarny.jpg">
                             <div class="overlay">
-                                <div class="text">Black</div>
+                                <div class="text"><?php echo $black; ?></div>
                             </div>
                         </div>
                         <div onclick="legs('pajak_bialy')" class="col blok miniatura">
                             <img src="min/pajak/pajak_bialy.jpg">
                             <div class="overlay">
-                                <div class="text">White</div>
+                                <div class="text"><?php echo $white; ?></div>
                             </div>
                         </div>
                         <div onclick="legs('pajak_szary')" class="col blok miniatura">
                             <img src="min/pajak/pajak_szary.jpg">
                             <div class="overlay">
-                                <div class="text">Grey</div>
+                                <div class="text"><?php echo $grey; ?></div>
                             </div>
                         </div>
                         <div onclick="legs('pajak_zloty')" class="col blok miniatura">
                             <img src="min/pajak/pajak_zloty.jpg">
                             <div class="overlay">
-                                <div class="text">Golden</div>
+                                <div class="text"><?php echo $golden; ?></div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <h4>Lotus</h4>
+                        <h4><?php echo $lotus; ?></h4>
                         <div onclick="legs('lotus_czarny')" class="col miniatura blok czarny">
                             <img src="min/lotus/lotus_8x4_czarny.jpg">
                             <div class="overlay">
-                                <div class="text">Black</div>
+                                <div class="text"><?php echo $black; ?></div>
                             </div>
                         </div>
                         <div onclick="legs('lotus_bialy')" class="col blok miniatura">
                             <img src="min/lotus/lotus_8x4_bialy.jpg">
                             <div class="overlay">
-                                <div class="text">White</div>
+                                <div class="text"><?php echo $white; ?></div>
                             </div>
                         </div>
                         <div onclick="legs('lotus_szary')" class="col blok miniatura">
                             <img src="min/lotus/lotus_8x4_szary.jpg">
                             <div class="overlay">
-                                <div class="text">Grey</div>
+                                <div class="text"><?php echo $grey; ?></div>
                             </div>
                         </div>
                         <div onclick="legs('lotus_zloty')" class="col blok miniatura">
                             <img src="min/lotus/lotus_8x4_zloty.jpg">
                             <div class="overlay">
-                                <div class="text">Golden</div>
+                                <div class="text"><?php echo $golden; ?></div>
                             </div>
                         </div>
                     </div>
@@ -359,11 +437,11 @@
         </div>
     </div>
     <div class="tables desktop">
-        <h4>Specyfikacja</h4>
+        <h4><?php echo $specification ?></h4>
         <div class="t-section">
             <div class="t-row">
                 <div class="column">
-                    <span>Dimensions(Fold):</span>
+                    <span><?php echo $spec_fold ?></span>
                 </div>
                 <div class="column">
                     <span>140x90x79 cm</span>
@@ -371,7 +449,7 @@
             </div>
             <div class="t-row">
                 <div class="column">
-                    <span>Material:</span>
+                    <span><?php echo $spec_material_whole ?></span>
                 </div>
                 <div class="column">
                     <span>Steel - MDF</span>
@@ -381,7 +459,7 @@
         <div class="t-section">
             <div class="t-row">
                 <div class="column">
-                    <span>Dimensions(unFold):</span>
+                    <span><?php echo $spec_unfold; ?></span>
                 </div>
                 <div class="column">
                     <span>210x90x79 cm </span>
@@ -389,7 +467,7 @@
             </div>
             <div class="t-row">
                 <div class="column">
-                    <span>Tabletop Visual:</span>
+                    <span><?php echo $spec_visual; ?></span>
                 </div>
                 <div class="column">
                     <span>8 cm</span>
@@ -399,18 +477,18 @@
         <div class="t-section">
             <div class="t-row">
                 <div class="column">
-                    <span>Tabletop colour:</span>
+                    <span><?php echo $spec_tabletop_color ?></span>
                 </div>
                 <div class="column">
-                    <span>Beech, Oak, Marble</span>
+                    <span><?php echo $spec_material ?></span>
                 </div>
             </div>
             <div class="t-row">
                 <div class="column">
-                    <span>Leg colour:</span>
+                    <span><?php echo $spec_leg ?></span>
                 </div>
                 <div class="column">
-                    <span>Black, White, Athracite, Golden</span>
+                    <span><?php echo $spec_leg_color; ?></span>
                 </div>
             </div>
         </div>
