@@ -89,6 +89,31 @@
     $spec_leg = "Leg color";
     $spec_leg_color = "Black, White, Athracite, Golden";
     }
+    elseif ($lang == "fr")
+    {
+    $background= "Aucun contexte";
+    $tabletop= "Couleur du plateau de table";
+    $leg = "Type de jambes";
+    $legtype = "Spider-leg";
+    $spider = "Spider";
+    $lotus = "Lotus";
+    $beech = "Hêtre";
+    $marble = "Marbre";
+    $oak = "Chêne";
+    $black = "Noir";
+    $white = "Blanc";
+    $grey = "Anthracite";
+    $golden = "D'OR";
+    $specification = "Informations";
+    $spec_fold = "Dimensions (pliage):";
+    $spec_unfold = "Dimensions (dépliées):";
+    $spec_tabletop_color = "Couleur de la table:";
+    $spec_material = "Hêtre, Chêne, Marbre";
+    $spec_material_whole = "Acier - MDF";
+    $spec_visual = "Hauteur visuelle du plateau de la table";
+    $spec_leg = "Couleur de la jambe";
+    $spec_leg_color = "Noir, Blanc, Athracite, Doré";
+    }
 ?>
 <title>Table Configurator</title>
 
@@ -100,7 +125,9 @@
             <li>|</li>
             <a href="?lang=de"><li><img src="svg/de.svg"></li></a>
             <li>|</li>
-            <a href="?lang=en"><li><img src="svg/fr.svg"></li></a>
+            <a href="?lang=fr"><li><img src="svg/fr.svg"></li></a>
+            <li>|</li>
+            <a href="?lang=en"><li><img src="svg/en.svg"></li></a>
         </ul>
     </nav>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
